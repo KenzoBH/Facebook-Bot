@@ -2,12 +2,6 @@
 from selenium.webdriver import Chrome, ChromeOptions
 import time
 
-chrome_options = ChromeOptions()
-prefs = {"profile.default_content_setting_values.notifications" : 2}
-chrome_options.add_experimental_option("prefs", prefs)
-
-browser = Chrome(chrome_options = chrome_options)
-
 def login_in_facebook(browser, your_email, your_password):
     facebook_url = 'https://www.facebook.com/'
     browser.get(facebook_url)
@@ -58,8 +52,13 @@ def facebook_logout(browser):
 
 your_email = input('Digite seu e-mail de login no Facebook: ')
 your_password = input('Digite sua senha do Facebook: ') 
-name = input('\n Digite o nome da pessoa para mandar uma mensagem: ')
-message = input('Digite amensagem a ser enviada:\n')
+name = input('\nDigite o nome da pessoa para mandar uma mensagem: ')
+message = input('Digite a mensagem a ser enviada:\n')
+
+chrome_options = ChromeOptions()
+prefs = {"profile.default_content_setting_values.notifications" : 2}
+chrome_options.add_experimental_option("prefs", prefs)
+browser = Chrome(chrome_options = chrome_options)
 
 login_in_facebook(browser, your_email, your_password)
 send_facebook_message_to(browser, name, message)
