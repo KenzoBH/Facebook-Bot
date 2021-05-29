@@ -6,3 +6,5 @@
  You can see the program [here](https://github.com/KenzoBH/Facebook-Bot/blob/main/facebook-bot.py).
 
 [![](https://github.com/KenzoBH/Data-Science/blob/main/Images/fb-bot-preview.gif)](https://github.com/KenzoBH/Facebook-Bot)
+
+As you can see, I love Pingu.
